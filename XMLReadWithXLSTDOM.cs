@@ -14,8 +14,7 @@ namespace IS_Labs
         {
             XPathDocument document = new XPathDocument(filepath);
             XPathNavigator navigator = document.CreateNavigator();
-            XmlNamespaceManager manager = new
-            XmlNamespaceManager(navigator.NameTable);
+            XmlNamespaceManager manager = new XmlNamespaceManager(navigator.NameTable);
             manager.AddNamespace("x","http://rejestrymedyczne.ezdrowie.gov.pl/rpl/eksport-danychv1.0");
             XPathExpression query = navigator.Compile("/x:produktyLecznicze/x:produktLeczniczy[@postac = 'Krem' and @nazwaPowszechnieStosowana = 'Mometasoni furoas']");
             query.SetContext(manager);
