@@ -21,7 +21,9 @@ namespace IS_Lab1_XML
             // odczyt danych z wykorzystaniem XPath i DOM
             Console.WriteLine("XML loaded with XPath");
             XMLReadWithXLSTDOM.Read(xmlpath);
-
+            XMLReadWithXLSTDOM.CountMometasoni(xmlpath);
+            XMLReadWithXLSTDOM.MakeListOfThreeDrugsWithMostPackages(xmlpath);
+            
             Console.ReadLine();
 
         }
